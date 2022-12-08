@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,13 +12,18 @@ export class LoginPage implements OnInit {
   senha = '';
 
 
-  constructor() { }
+  constructor(private rota: Router) { }
 
   ngOnInit() {
   }
 
   entrar(){
-    console.log(`login: ${this.login}, senha: ${this.senha}`)
+    this.rota.navigate(['/tabs/home'])
+    
+  }
+
+  cadastro(){
+    this.rota.navigate(['/cadastro'])
   }
 
 }
