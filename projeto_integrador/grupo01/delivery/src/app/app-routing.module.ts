@@ -20,6 +20,26 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'detalhes',
+    loadChildren: () => import('./detalhes/detalhes.module').then( m => m.DetalhesPageModule)
+  },
+  {
+    path: 'carrinho',
+    loadChildren: () => import('./carrinho/carrinho.module').then( m => m.CarrinhoPageModule)
+  },
+  {
+    path: 'endereco',
+    loadChildren: () => import('./endereco/endereco.module').then( m => m.EnderecoPageModule)
+  },
+  {
+    path: 'pagamento',
+    loadChildren: () => import('./pagamento/pagamento.module').then( m => m.PagamentoPageModule)
+  },
+  {
+    path: 'pedidos',
+    loadChildren: () => import('./pedidos/pedidos.module').then( m => m.PedidosPageModule)
   }
 
 ];

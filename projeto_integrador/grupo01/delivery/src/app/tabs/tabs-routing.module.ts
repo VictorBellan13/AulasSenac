@@ -12,12 +12,25 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
+        path: 'detalhes',
+        loadChildren: () => import('../detalhes/detalhes.module').then(m => m.DetalhesPageModule)
+      },
+      {
         path: 'perfil',
         loadChildren: () => import('../perfil/perfil.module').then(m => m.PerfilPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'carrinho',
+        loadChildren: () => import('../carrinho/carrinho.module').then(m => m.CarrinhoPageModule)
+      },
+      {
+        path: 'endereco',
+        loadChildren: () => import('../endereco/endereco.module').then(m => m.EnderecoPageModule)
+      },
+
+      {
+        path: 'pagamento',
+        loadChildren: () => import('../pagamento/pagamento.module').then(m => m.PagamentoPageModule)
       },
       {
         path: '',
