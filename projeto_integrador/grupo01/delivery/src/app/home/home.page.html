@@ -24,7 +24,7 @@
           </ion-card-header>
         
           <ion-card-content>
-            IMAGEM
+            <ion-img [src]="'data:image/png;base64,'+ categoria.img"></ion-img>
           </ion-card-content>
         </ion-card>
         </ion-slide>
@@ -44,7 +44,7 @@
             <ion-item *ngFor="let produto of produtos">
               
               <ion-thumbnail slot="start">
-                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                <ion-img [src]="'data:image/png;base64,'+ produto.img"></ion-img>
               </ion-thumbnail>
               <ion-label>{{produto.nome}}</ion-label>
               <ion-icon name="cart"></ion-icon>

@@ -29,6 +29,11 @@ const routes: Routes = [
       },
 
       {
+        path: 'pedidos',
+        loadChildren: () => import('../pedidos/pedidos.module').then(m => m.PedidosPageModule)
+      },
+
+      {
         path: 'pagamento',
         loadChildren: () => import('../pagamento/pagamento.module').then(m => m.PagamentoPageModule)
       },

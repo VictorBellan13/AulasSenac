@@ -26,5 +26,9 @@ export class ApiService {
     return this.http.delete(`${this.baseurl}/${endpoint}`);
   }
 
+  login(login: string){
+    return this.http.get( `${this.baseurl}/usuarios?login=${login}`)
+  }
+
 
 }

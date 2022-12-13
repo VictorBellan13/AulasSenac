@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pedidos',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosPage implements OnInit {
 
-  constructor() { }
+  constructor(private rota: Router) { }
 
   ngOnInit() {
   }
+
+  
 
 }

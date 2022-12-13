@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { DialogService } from '../dialog.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -13,12 +15,34 @@ export class CadastroPage implements OnInit {
   confsenha = '';
 
 
-  constructor() { }
+  constructor(private api: ApiService, private dialog: DialogService) { }
 
   ngOnInit() {
   }
 
-  entrar(){
+  cadastrar(){
+
+    if(this.senha === this.confsenha){
+
+    
+    this.api.salvar({login:this.email, senha:this.senha}, "usuarios" )
+    .subscribe( 
+      () => {
+        this.dialog.showSuccessAlert()
+        this.email = '';
+        this.senha = '';
+        this.confsenha = '';
+
+      },
+      err => {
+        this.dialog.showErrorAlert()
+
+      }
+    )
+    }else{
+      this.dialog.showAlert("Erro", "As senhas não são compativeis")
+    }
+
     console.log(`email: ${this.email}, senha: ${this.senha}, confsenha: ${this.confsenha}`)
   }
 
