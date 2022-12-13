@@ -16,7 +16,7 @@
       <ion-slides>
       
     
-      <ion-slide *ngFor="let categoria of categorias">
+      <ion-slide (click)="detalharcategoria(categoria)" *ngFor="let categoria of categorias">
         <ion-card>
           <ion-card-header>
             <ion-card-title>{{categoria.nome}}</ion-card-title>

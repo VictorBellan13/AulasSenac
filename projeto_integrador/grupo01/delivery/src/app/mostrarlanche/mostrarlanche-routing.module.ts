@@ -5,7 +5,7 @@ import { MostrarlanchePage } from './mostrarlanche.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':id',
     component: MostrarlanchePage
   }
 ];

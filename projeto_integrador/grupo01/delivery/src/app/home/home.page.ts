@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class HomePage implements OnInit {
   produtos: any[] = [];
   categorias: any[] = [];  
     
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService, private rota: Router) {
   }
 
   ngOnInit() {
@@ -24,6 +25,10 @@ export class HomePage implements OnInit {
     .subscribe( result => this.categorias = result);
   }
 
+  detalharcategoria(produto: any){
+    this.rota.navigate(["/tabs/mostrarlanche/" + produto.id])
+
+  }
 
 
 

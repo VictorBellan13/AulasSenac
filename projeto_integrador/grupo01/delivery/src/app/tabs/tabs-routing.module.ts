@@ -37,6 +37,12 @@ const routes: Routes = [
         path: 'pagamento',
         loadChildren: () => import('../pagamento/pagamento.module').then(m => m.PagamentoPageModule)
       },
+
+      {
+        path: 'mostrarlanche',
+        loadChildren: () => import('../mostrarlanche/mostrarlanche.module').then(m => m.MostrarlanchePageModule)
+      },
+
       {
         path: '',
         redirectTo: '/tabs/home',
