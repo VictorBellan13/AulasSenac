@@ -9,7 +9,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-radio-group value="pagamento">
+    <ion-radio-group [(ngModel)]="pagamento">
       <ion-item>
         <ion-label>Dinheiro</ion-label>
         <ion-radio slot="end" value="dinheiro"></ion-radio>
@@ -42,6 +42,8 @@
     </ion-radio-group>
   </ion-list>
 
-  <ion-button expand="full">FINALIZAR PEDIDO</ion-button>
+  <ion-button (click)= "finalizarPedido()" expand="full">FINALIZAR PEDIDO</ion-button>
+
+  <h1 style="text-align: center; color: green;">{{total | currency: 'BRL'}}</h1>
 
 </ion-content>

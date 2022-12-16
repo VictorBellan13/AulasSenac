@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { url } from 'inspector';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-pedidos',
@@ -8,9 +10,15 @@ import { Router } from '@angular/router';
 })
 export class PedidosPage implements OnInit {
 
-  constructor(private rota: Router) { }
+  pedidos: any [] = [];
+
+
+  constructor(private rota: Router, private api: ApiService) { }
 
   ngOnInit() {
+
+    this.api.obter("pedidos?_sort=id&_order=desc").subscribe(result => this.pedidos=result);
+
   }
 
   

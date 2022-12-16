@@ -8,13 +8,17 @@
 
 <ion-content>
 
-  <ion-item>
-    <ion-icon name="cart" slot="start"></ion-icon>
-    <ion-label>
-      
-    </ion-label>
-    
-  </ion-item>
+  <ion-card *ngFor="let pedido of pedidos">
+    <ion-card-header>
+      <ion-card-title>{{pedido.status}}</ion-card-title>
+      <ion-card-subtitle>Numero do Peiddo: {{pedido.id}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p>Tempo de entrega: 30 - 60 minutos.</p>
+      <p >Valor total: {{pedido.total | currency: 'BRL'}}</p>
+    </ion-card-content>
+  </ion-card>
 
 
 

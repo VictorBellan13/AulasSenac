@@ -14,9 +14,7 @@
       {{produto.nome}}
     </ion-label>
     <ion-label slot="end">
-      <ion-icon name="remove-circle-outline"></ion-icon> 
-      1
-      <ion-icon name="add-circle-outline"></ion-icon>
+      {{produto.preco | currency: 'BRL'}}
     </ion-label>
   </ion-item>
 
