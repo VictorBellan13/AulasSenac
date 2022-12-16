@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class CarrinhoPage implements OnInit {
 
-  constructor(private rota: Router) { }
+  constructor(private rota: Router, public data: DataService) { }
 
 
 

@@ -102,6 +102,7 @@
   ],
   "pedidos": [
     {
+      "id": 1,
       "usuario_id": 1,
       "telefone": "21999999999",
       "endereco": "Rua xyz, numero 7",
