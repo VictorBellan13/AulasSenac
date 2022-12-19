@@ -165,6 +165,23 @@
       "endereco": "25065090, Rua expedicionario jose amaro, 2222, 21970470533",
       "pagamento": "ccredito",
       "id": 4
+    },
+    {
+      "produtos": [
+        {
+          "produto_id": 2,
+          "valor": 10.5
+        },
+        {
+          "produto_id": 4,
+          "valor": 5.5
+        }
+      ],
+      "total": 16,
+      "status": "Aguardando confirmação",
+      "endereco": "25065090, Rua expedicionario jose amaro, 270, 21970470533",
+      "pagamento": "pix",
+      "id": 5
     }
   ]
 }

@@ -16,8 +16,10 @@ export class PedidosPage implements OnInit {
   constructor(private rota: Router, private api: ApiService) { }
 
   ngOnInit() {
+setInterval( () => {
+  this.api.obter("pedidos?_sort=id&_order=desc").subscribe(result => this.pedidos=result);
 
-    this.api.obter("pedidos?_sort=id&_order=desc").subscribe(result => this.pedidos=result);
+}, 1000)
 
   }
 
